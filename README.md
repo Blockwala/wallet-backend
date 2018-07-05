@@ -1,25 +1,25 @@
-#WALLET BACKEND
+# WALLET BACKEND
 
  wallet backend  for multichain coins currently supports:
 
- ###DASH
+ ### DASH
  
- ###BTC
+ ### BTC
  
- ###LTC
+ ### LTC
  
- ###DOGE
+ ### DOGE
  
  Note: Uses blockcypher internally for now
 
 
 
-##Reference:
+## Reference:
 https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-applications-using-uwsgi-web-server-with-nginx
 
 http://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
 
-##Setup:
+## Setup:
 Pip -r requirements.txt
 
 Setup Nginx 9000 port to 8000 cluster forwarding (references)
@@ -27,13 +27,13 @@ Setup Nginx 9000 port to 8000 cluster forwarding (references)
 Setup .ini settings file for uwsgi
 
 
-###Deployment:
+### Deployment:
 
-###DEBUG:
+### DEBUG:
 
 Sh deploy_stage.sh
 
-###PROD:
+### PROD:
 
 Start : uwsgi start
 
@@ -42,19 +42,19 @@ Stop : uwsgi --stop /tmp/wallet.pid
 Restart: uwsgi --reload /tmp/wallet.pid
 
 
-##Explanation
+## Explanation
 
-###For standalone http direct hits to wsgi :
+### For standalone http direct hits to wsgi :
 
 uwsgi --http :8000 --module wallet.wsgi
 
 uwsgi --socket 127.0.0.1:8000 --protocol=http -w wallet.wsgi
 
-###For nginx communication with uWsgi:
+### For nginx communication with uWsgi:
 
 uwsgi --socket 127.0.0.1:8000 -w wsgi
 
-##Nginx on production: 
+## Nginx on production: 
 
 Settings File:
 
@@ -67,7 +67,7 @@ sudo service nginx start
 
 sudo service nginx stop
 
-##Important files:
+## Important files:
 
 WSGI : wallet/wsgi
 
