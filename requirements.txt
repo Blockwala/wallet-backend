@@ -52,7 +52,7 @@ python-bitcoinlib==0.5.0
 python-dateutil==2.2
 pytz==2018.3
 pywallet==0.0.7
-PyYAML==3.12
+PyYAML==5.4
 qrcode==5.3
 requests==2.4.3
 rlp==0.6.0
