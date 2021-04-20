@@ -38,7 +38,7 @@ Pillow==5.0.0
 pluggy==0.6.0
 protobuf==3.0.0a3
 ptyprocess==0.5.2
-py==1.5.3
+py==1.10.0
 pyaes==1.6.1
 pybitcointools==1.1.15
 pycallgraph==1.0.1
